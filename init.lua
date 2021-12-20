@@ -14,7 +14,7 @@ chocolatestuff.make_thing_edible = function(item,amount)
 					"warn",
 					"[chocolatestuff] hunger_ng.add_hunger_data didn't work! Using manual hunger modification."
 				)
-				local player_name=user.get_player_name(user)
+				local player_name=user:get_player_name()
 				local hbefore=hunger_ng.get_hunger_information(player_name)
 				hunger_ng.alter_hunger(
 					player_name,
@@ -24,7 +24,7 @@ chocolatestuff.make_thing_edible = function(item,amount)
 				local hafter=hunger_ng.get_hunger_information(player_name)
 				if (not hbefore.invalid)
 				and (not hafter.invalid)
-				and hafter.hunger.exact > hbefore.hunger.exact
+				and hafter.hunger.exact ~= hbefore.hunger.exact
 				then
 					items:take_item()
 					return items
