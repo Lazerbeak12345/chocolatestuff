@@ -12,17 +12,21 @@ Adds edible chocolate armor and tools. Pairs well with [the edible swords mod][t
 
 ## TODO
 
-- [ ] How to make edible armor durability go down instead of hunger bar when wearing edible armor (look at hunger_ng set_effect)
+- [ ] How to make edible armor durability go down instead of hunger bar when wearing edible armor
+  - using hunger_ng (look at hunger_ng set_effect)
+  - using sofar/stamina
+  - using TenPlus1/stamina
+  - using flux's stamina fork (forked from sofar/stamina)
+  - using hbhunger
 - [ ] Upstream better toolranks integration.
 - [ ] Upstream better pick_axe_tweaks integration.
 - [ ] Upstream better handholds_redo integration https://content.minetest.net/packages/TestificateMods/handholds_redo/
 - [ ] Upstream complete custom textures in instant_ores
 - [ ] Upstream hunger_ng doesn't work very well on some items.
-- [ ] stamina (og) https://content.minetest.net/packages/sofar/stamina/
 - [ ] stamina (new) https://content.minetest.net/packages/TenPlus1/stamina/
-- [ ] hudbars https://content.minetest.net/packages/Wuzzy/hudbars/
-- [ ] hbhunger https://content.minetest.net/packages/Wuzzy/hbhunger/
-- [ ] hbsprint https://content.minetest.net/packages/texmex/hbsprint/
+- [ ] flux's stamina fork
+- [ ] make a way to actually use the tool (shift? no shift?)
+- [ ] Update readme
 
 ## Legal
 
