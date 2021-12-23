@@ -26,6 +26,7 @@ Adds edible chocolate armor and tools. Pairs well with [the edible swords mod][t
 - [ ] stamina (new) https://content.minetest.net/packages/TenPlus1/stamina/
 - [ ] flux's stamina fork
 - [ ] make a way to actually use the tool (shift? no shift?)
+  - Doesn't seem possible. Can't tell MT engine to eat the tool but not use tool (except hoe, which is a type defined in farming)
 - [ ] Update readme
 
 ## Legal
