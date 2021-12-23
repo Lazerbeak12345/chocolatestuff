@@ -22,7 +22,6 @@ Adds edible chocolate armor and tools. Pairs well with [the edible swords mod][t
 - [ ] Upstream better pick_axe_tweaks integration.
 - [ ] Upstream better handholds_redo integration https://content.minetest.net/packages/TestificateMods/handholds_redo/
 - [ ] Upstream complete custom textures in instant_ores
-- [ ] Upstream hunger_ng doesn't work very well on some items.
 - [ ] stamina (new) https://content.minetest.net/packages/TenPlus1/stamina/
 - [ ] flux's stamina fork
 - [ ] make a way to actually use the tool (shift? no shift?)
