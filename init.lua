@@ -1,40 +1,12 @@
 chocolatestuff = {}
 local hunger_ng_path = minetest.get_modpath("hunger_ng")
 chocolatestuff.make_thing_edible = function(item,amount)
+	minetest.override_item(item, {
+		on_use = minetest.item_eat(amount),
+	})
 	if hunger_ng_path then
 		hunger_ng.add_hunger_data(item, {
 			satiates = amount,
-		})
-		minetest.override_item(item, {
-			on_use = function (items,user,thing)
-				if items:get_definition()._hunger_ng then -- sometimes the add_hunger_data just doesn't work.
-					return minetest.do_item_eat(amount,nil,items,user,thing)
-				end
-				minetest.log(
-					"warn",
-					"[chocolatestuff] hunger_ng.add_hunger_data didn't work! Using manual hunger modification."
-				)
-				local player_name=user:get_player_name()
-				local hbefore=hunger_ng.get_hunger_information(player_name)
-				hunger_ng.alter_hunger(
-					player_name,
-					amount,
-					"hunger_ng.add_hunger_data didn't work. Manual adjustment."
-				)
-				local hafter=hunger_ng.get_hunger_information(player_name)
-				if (not hbefore.invalid)
-				and (not hafter.invalid)
-				and hafter.hunger.exact ~= hbefore.hunger.exact
-				then
-					items:take_item()
-					return items
-				end
-				-- NOTE silently fails if player_name == "" or hbefore.invalid or hafter.invalid
-			end
-		})
-	else
-		minetest.override_item(item, {
-			on_use = minetest.item_eat(amount),
 		})
 	end
 end
