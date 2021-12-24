@@ -1,10 +1,9 @@
 chocolatestuff = {}
-local hunger_ng_path = minetest.get_modpath("hunger_ng")
 chocolatestuff.make_thing_edible = function(item,amount)
 	minetest.override_item(item, {
 		on_use = minetest.item_eat(amount),
 	})
-	if hunger_ng_path then
+	if minetest.get_modpath("hunger_ng") ~= nil then
 		hunger_ng.add_hunger_data(item, {
 			satiates = amount,
 		})
@@ -15,7 +14,7 @@ chocolatestuff.make_things_edible = function(mod,name,scale,items)
 		chocolatestuff.make_thing_edible(mod..":"..typ.."_"..name,scale*amount)
 	end
 end
-if farming.mod and farming.mod == "redo" then
+if farming.mod == "redo" then
 	local mod = "chocolatestuff"
 	local name = "chocolate"
 	instant_ores.register_metal({ -- cuz eating your armor is so metal
@@ -41,15 +40,15 @@ if farming.mod and farming.mod == "redo" then
 		sword=2,
 		hoe=2 -- hoe comes with the chocolate, so we know we have it.
 	})
-	if minetest.get_modpath("3d_armor") then
+	if minetest.get_modpath("3d_armor") ~= nil then
 		chocolatestuff.make_things_edible(mod,name,scale,{
 			helmet=5,
 			chestplate=8,
 			leggings=7,
 			boots=4,
 		})
-		if minetest.get_modpath("shields") then
-			chocolatestuff.make_thing_edible(mod..":shield_"..name,2.5*7)
+		if minetest.get_modpath("shields") ~= nil then
+			chocolatestuff.make_thing_edible(mod..":shield_"..name,scale*7)
 		end
 	end
 end
