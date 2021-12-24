@@ -22,11 +22,13 @@ Adds edible chocolate armor and tools. Pairs well with [the edible swords mod][t
 - [ ] Upstream better pick_axe_tweaks integration.
 - [ ] Upstream better handholds_redo integration https://content.minetest.net/packages/TestificateMods/handholds_redo/
 - [ ] Upstream complete custom textures in instant_ores
+- [ ] Upstream better item metadata to be found with other armor and tools.
 - [ ] stamina (new) https://content.minetest.net/packages/TenPlus1/stamina/
 - [ ] flux's stamina fork
 - [ ] make a way to actually use the tool (shift? no shift?)
   - Doesn't seem possible. Can't tell MT engine to eat the tool but not use tool (except hoe, which is a type defined in farming)
 - [ ] Update readme
+- [ ] delete functions after mods loaded (using event - not timer)
 
 ## Legal
 
