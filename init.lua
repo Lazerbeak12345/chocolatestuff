@@ -1,4 +1,4 @@
-chocolatestuff = {}
+local chocolatestuff = {}  -- If this is ever needed by another mod, move the needed functions to an api mod, and have this and the other both point to the api
 chocolatestuff.make_thing_edible = function(item,amount)
 	minetest.override_item(item, {
 		on_use = minetest.item_eat(amount),
