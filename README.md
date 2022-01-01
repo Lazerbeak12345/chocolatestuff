@@ -12,23 +12,19 @@ Adds edible chocolate armor and tools. Pairs well with [the edible swords mod][t
 
 ## TODO
 
-- [ ] How to make edible armor durability go down instead of hunger bar when wearing edible armor
-  - using hunger_ng (look at hunger_ng set_effect)
-  - using sofar/stamina
-  - using TenPlus1/stamina
-  - using flux's stamina fork (forked from sofar/stamina)
-  - using hbhunger
 - [ ] Upstream better toolranks integration.
 - [ ] Upstream better pick_axe_tweaks integration.
 - [ ] Upstream better handholds_redo integration https://content.minetest.net/packages/TestificateMods/handholds_redo/
 - [ ] Upstream complete custom textures in instant_ores
 - [ ] Upstream better item metadata to be found with other armor and tools.
-- [ ] stamina (new) https://content.minetest.net/packages/TenPlus1/stamina/
-- [ ] flux's stamina fork
+	- This is actually just a need for better 3d_armor integration
 - [ ] make a way to actually use the tool (shift? no shift?)
   - Doesn't seem possible. Can't tell MT engine to eat the tool but not use tool (except hoe, which is a type defined in farming)
 - [ ] Update readme
 - [ ] delete functions after mods loaded (using event - not timer)
+- [ ] better sounds
+- [ ] better textures
+- [ ] Settings?
 
 ## Legal
 
