@@ -111,8 +111,7 @@ if farming.mod == "redo" then
 			chocolatestuff.make_thing_edible(mod..":shield_"..name,scale*7)
 		end
 		chocolatestuff.equipped = {}
-		-- TODO FIX UPSTREAM. This is only needed bc instant_ores doesn't do this correctly
-		local function buggy_armor_search_workaround(elms)
+		local function armor_search(elms)
 			for _,elm in pairs(elms) do
 				if elm:find("chocolatestuff:") == 1 then
 					return true
@@ -132,7 +131,7 @@ if farming.mod == "redo" then
 					minetest.after(1, delayed_armor_check(pname))
 					return
 				end
-				if elms.chocolate ~= nil or buggy_armor_search_workaround(elms) then
+				if armor_search(elms) then
 					chocolatestuff.equipped[pname] = true
 				else
 					chocolatestuff.equipped[pname] = nil
