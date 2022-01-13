@@ -1,5 +1,7 @@
 # The Chocolate Stuff Mod
 
+[![ContentDB](https://content.minetest.net/packages/lazerbeak12345/ediblestuff_api/shields/downloads/)](https://content.minetest.net/packages/lazerbeak12345/ediblestuff_api/)
+
 Adds edible chocolate armor and tools. Pairs well with
 [the edible swords mod][the_edible_swords_mod].
 
