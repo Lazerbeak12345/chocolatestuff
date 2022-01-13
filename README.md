@@ -14,18 +14,21 @@ durability of a random armor piece.
 - MineTest <!--TODO what version?-->
 - [Farming redo](https://content.minetest.net/packages/TenPlus1/farming/)
 - `instant_ores`
+- [`ediblestuff_api`](https://github.com/Lazerbeak12345/ediblestuff_api)
 
 ## TODO
 
-- [x] Upstream better toolranks integration. [pr here](https://notabug.org/Piezo_/instant_ores/pulls/1)
-- [x] Upstream better pick_axe_tweaks integration. [pr here](https://notabug.org/Piezo_/instant_ores/pulls/3)
-- [x] Upstream better handholds_redo integration. [pr_here](https://notabug.org/Piezo_/instant_ores/pulls/4)
+- [ ] Upstream better toolranks integration.
+  - [x] PR made [pr here](https://notabug.org/Piezo_/instant_ores/pulls/1)
+  - [ ] PR accepted
+- [ ] Upstream better pick_axe_tweaks integration.
+  - [x] PR made [pr here](https://notabug.org/Piezo_/instant_ores/pulls/3)
+  - [ ] PR accepted
+- [ ] Upstream better handholds_redo integration.
+  - [x] PR made [pr_here](https://notabug.org/Piezo_/instant_ores/pulls/4)
+  - [ ] PR accepted
 - [ ] Upstream complete custom textures in instant_ores
 - [ ] Upstream better item metadata to be found with other armor and tools.
-- [ ] Upstream bug in 3d_armor with `get_weared_armor_elements`
-- [ ] make a way to actually use the tool (shift? no shift?)
-  - Doesn't seem possible. Can't tell MT engine to eat the tool but not use tool (except hoe, which is a type defined in farming)
-- [ ] delete functions after mods loaded (using event - not timer)
 - [ ] better sounds
 - [ ] better textures
 - [ ] Settings?
@@ -38,7 +41,7 @@ Copyright 2021-2 Lazerbeak12345
 
 - The YourLand players for a bunch of questionable ideas for this questionable mod. Original idea was from "Bla."
 - The creator of [the obsidianstuff redo mod](https://github.com/OgelGames/obsidianstuff). This takes inspiration from that repo.
-- The creator [the edible swords mod][the_edible_swords_mod]. I took inspiration from this repo as well.
+- The creator of [the edible swords mod][the_edible_swords_mod]. I took inspiration from this repo as well.
 
 ### Licence
 
