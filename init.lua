@@ -21,18 +21,20 @@ if farming.mod == "redo" then
 	if minetest.get_modpath("3d_armor") ~= nil then
 		ediblestuff.make_armor_edible_while_wearing(mod,name,scale)
 		-- Ok, so apparently this idea for chocolate armor wasn't super original. May as well play nice.
-		if minetest.get_modpath("moarmour") then
-			ediblestuff.make_armor_edible_while_wearing("moarmour",name,scale)
-			for _,elm in pairs({
-				"helmet",
-				"chestplate",
-				"leggings",
-				"boots"
-			}) do
-				minetest.register_alias_force(mod..":"..elm.."_"..name,"moarmour:"..elm.."_chocolate")
-			end
-			if minetest.get_modpath("shields") ~= nil then
-				minetest.register_alias_force(mod..":shield_"..name,"moarmour:shield_chocolate")
+		for _,armormod in ipairs{"armor_addon","moarmour"} do
+			if minetest.get_modpath(armormod) then
+				ediblestuff.make_armor_edible_while_wearing(armormod,name,scale)
+				for _,elm in pairs({
+					"helmet",
+					"chestplate",
+					"leggings",
+					"boots"
+				}) do
+					minetest.register_alias_force(mod..":"..elm.."_"..name,armormod..":"..elm.."_chocolate")
+				end
+				if minetest.get_modpath("shields") ~= nil then
+					minetest.register_alias_force(mod..":shield_"..name,armormod..":shield_chocolate")
+				end
 			end
 		end
 	end
