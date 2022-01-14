@@ -18,6 +18,31 @@ durability of a random armor piece.
 - `instant_ores`
 - [`ediblestuff_api`](https://github.com/Lazerbeak12345/ediblestuff_api)
 
+### A note about "moarmor"
+
+Shortly after doing everything short of hitting the "publish" button on
+contentdb, I discoverd that the mod moarmor has chocolate armor already. My
+compromise is thus:
+
+1. This mod will still register the chocolate armor exactly as before if moarmor
+is absent.
+2. If present, this mod will alias to moarmor in such a manner as to prefer
+moarmor for stats, sounds and textures.
+3. This mod will register _only_ the chocolate armor in the ediblestuff_api as
+it does its own chocolate armor - using the same saturation values.
+
+> I won't be registering the other "food armor" as edible - even though I
+> could - because it feels out-of-scope of this mod.
+
+This means that if both this and moarmor are present you get:
+
+- All of the chocolate tools
+- Slightly different armor balancing.
+- Better armor textures.
+- Better armor sounds.
+- You can eat the armor, even while wearing it. (you can't do either with
+theirs)
+
 ## TODO
 
 - [ ] Upstream better toolranks integration.

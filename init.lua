@@ -31,19 +31,34 @@ if farming.mod == "redo" then
 			leggings=7,
 			boots=4,
 		})
+		-- Ok, so apparently this idea for chocolate armor wasn't super original. May as well play nice.
+		local moarmour = minetest.get_modpath("moarmour")
 		for _,elm in pairs({
 			"helmet",
 			"chestplate",
 			"leggings",
 			"boots"
 		}) do
+			local elm_name=mod..":"..elm.."_"..name
 			-- Seperatly register armor as one that you can eat while wearing
-			ediblestuff.edible_while_wearing[mod..":"..elm.."_"..name] = true
+			ediblestuff.edible_while_wearing[elm_name] = true
+			if moarmour then
+				local moarmour_name = "moarmour:"..elm.."_chocolate"
+				minetest.register_alias_force(elm_name,moarmour_name)
+				ediblestuff.make_thing_edible(moarmour_name,ediblestuff.satiates[elm_name])
+				ediblestuff.edible_while_wearing[moarmour_name] = true
+			end
 		end
 		if minetest.get_modpath("shields") ~= nil then
 			local shield_item_name = mod..":shield_"..name
 			ediblestuff.make_thing_edible(shield_item_name,scale*7)
 			ediblestuff.edible_while_wearing[shield_item_name] = true
+			if moarmour then
+				local moarmour_name = "moarmour:shield_chocolate"
+				minetest.register_alias_force(shield_item_name,moarmour_name)
+				ediblestuff.make_thing_edible(moarmour_name,ediblestuff.satiates[shield_item_name])
+				ediblestuff.edible_while_wearing[moarmour_name] = true
+			end
 		end
 	end
 end
