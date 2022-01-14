@@ -21,9 +21,12 @@ if farming.mod == "redo" then
 	if minetest.get_modpath("3d_armor") ~= nil then
 		ediblestuff.make_armor_edible_while_wearing(mod,name,scale)
 		-- Ok, so apparently this idea for chocolate armor wasn't super original. May as well play nice.
-		for _,armormod in ipairs{"armor_addon","moarmour"} do
+		local made_aliases = false
+		for _,armormod in ipairs{"moarmour","armor_addon"} do
 			if minetest.get_modpath(armormod) then
 				ediblestuff.make_armor_edible_while_wearing(armormod,name,scale)
+				if made_aliases then break end
+				made_aliases = true
 				for _,elm in pairs({
 					"helmet",
 					"chestplate",
