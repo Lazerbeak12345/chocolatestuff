@@ -1,4 +1,4 @@
-if farming.mod == "redo" then return end
+if farming.mod ~= "redo" then return end
 local mod = "chocolatestuff"
 local name = "chocolate"
 instant_ores.register_metal({ -- cuz eating your armor is so metal
