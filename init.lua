@@ -18,26 +18,25 @@ minetest.register_alias_force(
 )
 local scale=2.5
 ediblestuff.make_tools_edible(mod,name,scale)
-if minetest.get_modpath("3d_armor") ~= nil then
-	ediblestuff.make_armor_edible_while_wearing(mod,name,scale)
-	-- Ok, so apparently this idea for chocolate armor wasn't super original. May as well play nice.
-	local made_aliases = false
-	for _,armormod in ipairs{"moarmour","armor_addon"} do
-		if minetest.get_modpath(armormod) then
-			ediblestuff.make_armor_edible_while_wearing(armormod,name,scale)
-			if made_aliases then break end
-			made_aliases = true
-			for _,elm in pairs({
-				"helmet",
-				"chestplate",
-				"leggings",
-				"boots"
-			}) do
-				minetest.register_alias_force(mod..":"..elm.."_"..name,armormod..":"..elm.."_chocolate")
-			end
-			if minetest.get_modpath("shields") ~= nil then
-				minetest.register_alias_force(mod..":shield_"..name,armormod..":shield_chocolate")
-			end
+if minetest.get_modpath("3d_armor") == nil then return end
+ediblestuff.make_armor_edible_while_wearing(mod,name,scale)
+-- Ok, so apparently this idea for chocolate armor wasn't super original. May as well play nice.
+local made_aliases = false
+for _,armormod in ipairs{"moarmour","armor_addon"} do
+	if minetest.get_modpath(armormod) then
+		ediblestuff.make_armor_edible_while_wearing(armormod,name,scale)
+		if made_aliases then break end
+		made_aliases = true
+		for _,elm in pairs({
+			"helmet",
+			"chestplate",
+			"leggings",
+			"boots"
+		}) do
+			minetest.register_alias_force(mod..":"..elm.."_"..name,armormod..":"..elm.."_chocolate")
+		end
+		if minetest.get_modpath("shields") ~= nil then
+			minetest.register_alias_force(mod..":shield_"..name,armormod..":shield_chocolate")
 		end
 	end
 end
