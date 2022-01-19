@@ -27,16 +27,12 @@ for _,armormod in ipairs{"moarmour","armor_addon"} do
 		ediblestuff.make_armor_edible_while_wearing(armormod,name,scale)
 		if made_aliases then break end
 		made_aliases = true
-		for _,elm in pairs({
-			"helmet",
-			"chestplate",
-			"leggings",
-			"boots"
-		}) do
-			minetest.register_alias_force(mod..":"..elm.."_"..name,armormod..":"..elm.."_chocolate")
-		end
+		minetest.register_alias_force("chocolatestuff:helmet_chocolate",    armormod..":helmet_chocolate")
+		minetest.register_alias_force("chocolatestuff:chestplate_chocolate",armormod..":chestplate_chocolate")
+		minetest.register_alias_force("chocolatestuff:leggings_chocolate",  armormod..":leggings_chocolate")
+		minetest.register_alias_force("chocolatestuff:boots_chocolate",     armormod..":boots_chocolate")
 		if minetest.get_modpath("shields") ~= nil then
-			minetest.register_alias_force(mod..":shield_"..name,armormod..":shield_chocolate")
+			minetest.register_alias_force("chocolatestuff:shield_chocolate",armormod..":shield_chocolate")
 		end
 	end
 end
