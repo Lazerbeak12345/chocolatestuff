@@ -60,7 +60,6 @@ theirs)
 - [ ] better textures
 - [ ] Settings?
 - [ ] additional sources for chocolate
-- [ ] Make ailiases for chocolate armors while other chocolate armors are absent
 
 ## Legal
 

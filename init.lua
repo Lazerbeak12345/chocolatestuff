@@ -36,3 +36,18 @@ for _,armormod in ipairs{"moarmour","armor_addon"} do
 		end
 	end
 end
+-- If neither of the other mods are present...
+if not made_aliases then
+	minetest.register_alias_force("moarmour:helmet_chocolate",       "chocolatestuff:helmet_chocolate")
+	minetest.register_alias_force("moarmour:chestplate_chocolate",   "chocolatestuff:chestplate_chocolate")
+	minetest.register_alias_force("moarmour:leggings_chocolate",     "chocolatestuff:leggings_chocolate")
+	minetest.register_alias_force("moarmour:boots_chocolate",        "chocolatestuff:boots_chocolate")
+	minetest.register_alias_force("armor_addon:helmet_chocolate",    "chocolatestuff:helmet_chocolate")
+	minetest.register_alias_force("armor_addon:chestplate_chocolate","chocolatestuff:chestplate_chocolate")
+	minetest.register_alias_force("armor_addon:leggings_chocolate",  "chocolatestuff:leggings_chocolate")
+	minetest.register_alias_force("armor_addon:boots_chocolate",     "chocolatestuff:boots_chocolate")
+	if minetest.get_modpath("shields") ~= nil then
+		minetest.register_alias_force("moarmour:shield_chocolate",   "chocolatestuff:shield_chocolate")
+		minetest.register_alias_force("armor_addon:shield_chocolate","chocolatestuff:shield_chocolate")
+	end
+end
