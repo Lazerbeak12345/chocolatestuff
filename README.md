@@ -15,6 +15,7 @@ durability of a random armor piece.
 
 - MineTest <!--TODO what version?-->
 - [Farming redo](https://content.minetest.net/packages/TenPlus1/farming/)
+	- Alternativly [mtfoods](https://forum.minetest.net/viewtopic.php?f=9&t=10187) should work.
 - `instant_ores`
 - [`ediblestuff_api`](https://github.com/Lazerbeak12345/ediblestuff_api)
 
