@@ -1,7 +1,8 @@
 local use_farming_redo = minetest.get_modpath("farming") ~= nil and farming.mod == "redo"
 local use_mtfoods = minetest.get_modpath("mtfoods") ~= nil and not use_farming_redo
 local use_food = minetest.get_modpath("food_basic") ~= nil and not use_mtfoods
-if not (use_farming_redo or use_food or use_mtfoods) then
+local use_mcl_morefood = minetest.get_modpath("mcl_morefood") ~= nil and not use_food
+if not (use_farming_redo or use_food or use_mtfoods or use_mcl_morefood) then
 	minetest.log("info","chocolatestuff: could not find source for chocolate. Chocolate armor will not be obtainable in survival.")
 end
 instant_ores.register_metal({ -- cuz eating your armor is so metal
@@ -33,6 +34,12 @@ elseif use_food then
 	minetest.register_alias_force(
 		"chocolatestuff:chocolate_ingot",
 		"foods:dark_chocolate"
+	)
+elseif use_mcl_morefood then
+	scale=5.5  -- Chocolate in this mod is very filling
+	minetest.register_alias_force(
+		"chocolatestuff:chocolate_ingot",
+		"mcl_morefood:chocolate_dark"
 	)
 end
 ediblestuff.make_tools_edible("chocolatestuff","chocolate",scale)
