@@ -19,6 +19,11 @@ elseif minetest.get_modpath("food_basic") ~= nil then
 		"chocolatestuff:chocolate_ingot",
 		"foods:dark_chocolate"
 	)
+elseif minetest.get_modpath("x_farming") ~= nil then
+	minetest.register_alias_force(
+		"chocolatestuff:chocolate_ingot",
+		"x_farming:chocolate"
+	)
 elseif minetest.get_modpath("mcl_morefood") ~= nil then
 	scale=5.5  -- Chocolate in this mod is very filling
 	minetest.register_alias_force(
