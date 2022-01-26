@@ -55,12 +55,14 @@ theirs)
 - [ ] Upstream better handholds_redo integration.
   - [x] PR made [pr_here](https://notabug.org/Piezo_/instant_ores/pulls/4)
   - [ ] PR accepted
+- [ ] Upstream support for MineClone2 as base game
+  - [x] PR made [pr here](https://notabug.org/Piezo_/instant_ores/pulls/5)
+  - [ ] PR accepted
 - [ ] Upstream complete custom textures in instant_ores
 - [ ] Upstream better item metadata to be found with other armor and tools.
 - [ ] better sounds
 - [ ] better textures
 - [ ] Settings?
-- [ ] additional sources for chocolate
 
 ## Legal
 
