@@ -14,10 +14,16 @@ durability of a random armor piece.
 ## Requires
 
 - MineTest <!--TODO what version?-->
-- [Farming redo](https://content.minetest.net/packages/TenPlus1/farming/)
-	- Alternativly [mtfoods](https://forum.minetest.net/viewtopic.php?f=9&t=10187) should work.
-- `instant_ores`
+- Instant Ores
 - [`ediblestuff_api`](https://github.com/Lazerbeak12345/ediblestuff_api)
+
+### Optional
+
+- (reccomended for MTG) [Farming redo](https://content.minetest.net/packages/TenPlus1/farming/)
+- [mtfoods](https://forum.minetest.net/viewtopic.php?f=9&t=10187)
+- Food Basic
+- X farming
+- (if Instant Ores is MCL2 compatible) MCL Morefood
 
 ### A note about "moarmor"
 
